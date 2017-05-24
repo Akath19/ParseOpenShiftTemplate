@@ -133,16 +133,16 @@ XHR.setCallback = function(callback) {
 XHR.POST = function(path, callback) {
   var seed = {"score":1337,"playerName":"Sean Plott","cheatMode":false}
   this.xhttp.open("POST", Config.getUrl() + path, true);
-  this.xhttp.setRequestHeader("X-Parse-Application-Id", "app-id");
-  this.xhttp.setRequestHeader("X-Parse-Master-Key", "master-key");
+  this.xhttp.setRequestHeader("X-Parse-Application-Id", "SoporteGlobalDev");
+  this.xhttp.setRequestHeader("X-Parse-Master-Key", "1234567890");
   this.xhttp.setRequestHeader("Content-type", "application/json");
   this.xhttp.send(JSON.stringify(seed));
 }
 
 XHR.GET = function(path, callback) {
   this.xhttp.open("GET", Config.getUrl() + path + '/' + Store.objectId, true);
-  this.xhttp.setRequestHeader("X-Parse-Application-Id", "app-id");
-  this.xhttp.setRequestHeader("X-Parse-Master-Key", "master-key");
+  this.xhttp.setRequestHeader("X-Parse-Application-Id", "SoporteGlobalDev");
+  this.xhttp.setRequestHeader("X-Parse-Master-Key", "1234567890");
   this.xhttp.setRequestHeader("Content-type", "application/json");
   this.xhttp.send(null);
 }
